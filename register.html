@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TAYMPERS!</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+   <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   <style>
+      body {
+        background-image: url('img/bg.png'); 
+        background-size: cover; 
+      }
+    </style>
+
+</head>
+<body>
+<!--header -->
+   <header class="header">
+      <div class="flex">
+         <a href="index.html">
+            <img src="img/logo1.png" height="100" alt="Logo">
+        </a>
+          <nav class="navbar">
+              <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="#featured">LIBRARY</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+				  <li><button class="button" id="form-open">ACCOUNT</button></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+<!--header -->
+
+<section class="loginreg" id="loginreg">
+<!-- forms -->
+      <div class="form_container">
+		<!-- REGISTER -->
+		        <div class="form signup_form">
+          <form action="#">
+            <h2>Sign-up</h2>
+            <div class="input_box">
+              <input type="username" placeholder="Ilagay ang iyong Username" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="email" placeholder="Ilagay ang iyong email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Lumikha ng password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+	    <div class="input_box">
+              <input type="age" placeholder="Ilagay ang iyong edad" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+	    
+            <div class="input_box">
+              <input type="password" placeholder="I-confirm ang password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button">Sign-up</button>
+
+            <div class="login_signup">Mayroon nang account? <a href="login.html">Log-in</a></div>
+          </form>
+        </div>
+      </div>
+<!-- forms -->
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
