@@ -1,0 +1,523 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css?family=Dekko:wght@200;300;400;500;600;700&display=swap");
+:root{
+  --black: #000;
+  --red: red;
+  --light-color: #666;
+  --white: #fff;
+  --border: .1rem solid rgba(0,0,0,.1);
+  --border-hover:.rem solid var(var(--black));
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dekko", sans-serif;
+  transition:all .2s linear;
+  transition: width none;
+  text-decoration: none;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+section{
+  padding:5rem 9%;
+}
+.header{
+  position: sticky;
+  top:0; left:0; right:0;
+  background-color: var(--white);
+  z-index: 1000;
+  border: 7px solid black;
+}
+
+.header .flex{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0;
+  max-width: 1200px;
+  position: relative;
+}
+
+.header .flex .navbar ul{
+  list-style: none;
+}
+
+.header .flex .navbar ul li{
+  float: left;
+  position: relative;
+  border-inline-start: 7px solid black;
+}
+
+.header .flex .navbar ul li a{
+  font-size: 4rem;
+  padding:1rem 1.5rem;
+  display: block;
+  color:var(--black);
+  text-transform: capitalize;
+}
+
+.header .flex .navbar ul li a:hover{
+  background-color: var(--black);
+  color:var(--white);
+}
+
+.header .flex .navbar ul li ul{
+  position: absolute;
+  left:0;
+  width: 15rem;
+  background-color: var(--white);
+  animation: fadeIn .2s linear;
+  display: none;
+}
+
+.button {
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 40px;
+}
+.button:active {
+  transform: scale(0.98);
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.9rem 3rem;
+  border-radius: .5rem;
+  color: #fff;
+  background: var(--black);
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn:hover{
+  background: var(--red);
+}
+
+/*====================FORM=======================*/
+/*bg*/
+.home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+}
+/*===============CONTENT============================================*/
+.home{
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.home .row{
+  display: flex;
+  align-items: center;
+  position: relative;
+ flex-wrap: wrap;
+}
+.home .row .content{
+   position: relative;
+   flex:2 2 40rem;
+   background-color: var(--white);
+   border: .5rem solid black;
+   padding: 10rem;
+   left: 10%
+}
+.btn1{
+   background-image: url(../TAYMPERS/img/button.png);
+   display: inline-block;
+   align-items: center;
+   justify-content: center;
+   padding:.5rem 1rem;
+   color: var(--black);
+   cursor: pointer;
+   font-weight: 500;
+   background-size: contain; 
+   border: none;
+   width: 60rem;
+   height: 18rem;
+ }
+.home .row .book-category{
+  flex:1 1 42rem;
+  text-align: center;
+  list-style: none;
+}
+.home .row .book-category a{
+   font-size: 4rem;
+   color: var(--black);
+   -webkit-text-stroke: 2px var(--white);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+     position: absolute;
+   right: 15%;
+}
+.home .row .book-category a:hover{
+    transform: scale(1.1);
+   position: absolute;
+   right: 15%;
+}
+
+.home .row .content h3{
+  color: var(--black);
+  font-size: 12;
+}
+.home .row .book-category img{
+   position: absolute;
+   right: 15%;
+}
+.home .row .content img{
+   height: 19rem;
+   position: absolute;
+   top: -9%;
+   left: 10;
+}
+
+.home .row .content p{
+  color: var(--black);
+  font-size: 30px;
+  line-height: 1;
+  padding:1rem 0;
+  margin: 20px;
+}
+.border{
+   height: 80rem;
+   flex:auto;
+}
+.about .content{
+   flex:1 1 42rem;
+   background-color: var(--white);
+   border: 1rem solid black;
+}
+.about h1{
+   text-align: center;
+   padding-top: 5rem;
+   font-size: 10rem;
+}
+.about p{
+   font-size: 4rem;
+   text-align: justify;
+   margin: 5rem;
+}
+.footer{
+   background-color: var(--white);
+   height: 10rem;
+}
+
+.footer .credit{
+   text-align: center;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.footer .credit span{
+   color:var(--black);
+}
+
+
+
+
+
+
+@media (mx-width:991px){
+  html{
+    font-size: 55%;
+  }
+  .header{
+    padding:2rem;
+  }
+  section{
+    padding: 3rem 2rem;
+  }
+}
+
+@media (mx-width:768px){
+  .header{
+    display: none;
+    box-shadow: var(--black);
+  }
+  .home .row .content{
+    text-align: center;
+  }
+
+  .home .row .content h3{
+    font-size: 3.5rem;
+  }
+
+
+}
+
+/*===============FEATURED================================================*/
+.featured .row{
+	background-image: url('img/featbooks.png');
+	background-size: 1080px;
+	height: 419px;
+	width: 1080px;
+	background-position: center;
+	margin: auto;
+	padding: 30px;
+	padding-top: 120px;
+	text-align: center;
+}
+
+.featured .row button{
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+
+.featured .row img{
+	height: 20rem;
+}
+
+/*===============ABOUT================================================*/
+
+
+
+/*===============PROFILE================================================*/
+
+
+
+
+.deets .row {
+   position: relative;
+   justify-content: center;
+   flex:3 3 10rem;
+   background-color: var(--white);
+   border: .5rem solid black;
+   padding-top: 10rem;
+   padding-bottom: 40rem;
+   margin-top: 20px;
+   margin-bottom: 30px;
+	
+}
+.deets .edit_profile {
+	font-size: 20px;
+}
+.deets .edit_profile h1 {
+  font-size: 40px;
+  color: #0b0217;
+  text-align: center;
+}
+.inputbox {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+.inputbox input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+.inputbox input:focus {
+  border-color: #7d2ae8;
+}
+.inputbox i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+}
+.inputbox i.email,
+.inputbox i.password {
+  left: 0;
+}
+.inputbox input:focus ~ i.email,
+.inputbox input:focus ~ i.password {
+  color: #7d2ae8;
+}
+.inputbox i.pw_hide {
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.deets .button {
+  background: #7d2ae8;
+  margin-right:5px;
+  margin-top: 10px;
+  margin-left: 180px;
+  width: 30%;
+  padding: 18px 0;
+  border-radius: 10px;
+  font-size: 18px;
+  justify-content: center;
+  display:inline-block;
+}
+
+
+
+img {
+border-radius: 10px;
+width: 100px !important;
+height: 100px !important;
+}
+p {
+font-size: 18px;
+margin-top: 10px
+
+
+
+}
+
+}
+/*===================================Login Register======================================*/
+/*forms*/
+.loginreg {
+	position: center;
+	margin: 10px;
+  align-items: center;
+  line-height: 2px;
+}
+
+.loginreg .form_container {
+  position: absolute;
+  background-color: var(--white);
+  padding:5rem;
+  border: 2px solid black;
+  margin: auto;
+  text-align: center;
+  left: 35%
+}
+/*signup*/
+.signup_form {
+  display: none;
+}
+.form_container .signup_form {
+  display: block;
+}
+.form_container .login_form {
+  display: block;
+}
+.loginreg h2 {
+  font-size: 22px;
+  color: #0b0217;
+  text-align: center;
+}
+.input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+.input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus {
+  border-color: #7d2ae8;
+}
+.input_box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+}
+.input_box i.email,
+.input_box i.password {
+  left: 0;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+  color: #7d2ae8;
+}
+.input_box i.pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_container a {
+  color: #7d2ae8;
+  font-size: 12px;
+}
+.form_container a:hover {
+  text-decoration: underline;
+}
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+.checkbox input {
+  accent-color: #7d2ae8;
+}
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+}
+.form_container .button {
+  background: #7d2ae8;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (mx-width:450px){
+  html{
+    font-size: 50%;
+  }
+}
